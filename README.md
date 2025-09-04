@@ -124,27 +124,18 @@ short_signal = (vix_high) & (market_weak) & (vix_declining)
 ---
 
 ## 📂 Repository Structure
+This is the **current** Repository Structure. Codes are still in progress, but exploration notebook is up!
 
 ```
 📦 vix-trading-strategy-ml/
 ├── 📋 README.md                    # You are here!
 ├── 📓 notebooks/
-│   ├── 01_data_exploration.ipynb   # Initial data analysis
-│   ├── 02_strategy_development.ipynb # Rule-based strategies
-│   └── 03_ml_enhancement.ipynb     # Machine learning approach
+│   └── 00-vix-trading-strategy-exploration.ipynb
 ├── 🔧 src/
-│   ├── data_loader.py              # Data ingestion and cleaning
-│   ├── feature_engineering.py      # Custom indicators
-│   ├── strategies.py               # Trading strategy implementations
-│   ├── performance_metrics.py      # Risk and return calculations
-│   └── visualization.py            # Professional charts
-├── 📊 data/
-│   ├── raw/                        # Kaggle datasets
-│   └── processed/                  # Cleaned data
-├── 📈 results/
-│   ├── performance_summary.csv     # Key metrics
-│   └── visualizations/             # Charts and plots
-└── 📋 requirements.txt             # Dependencies
+│   └── __init__.py
+└── 📊 data/
+    ├── SPX.csv                      # S&P 500 Historical Dataset
+    └── VIX.csv                      # VIX Index Dataset
 ```
 
 ---
@@ -157,40 +148,19 @@ git clone https://github.com/yourusername/vix-trading-strategy-ml.git
 cd vix-trading-strategy-ml
 ```
 
-### 2️⃣ **Install Dependencies**
-```bash
-pip install -r requirements.txt
-```
-
-### 3️⃣ **Download Data**
+### 2️⃣ **Download Data**
 - [S&P 500 Historical Data](https://www.kaggle.com/datasets/henryhan117/sp-500-historical-data)
 - [VIX Daily Prices](https://www.kaggle.com/datasets/maxsmyc/vix-volatility-index-daily-price)
 - Place CSV files in `data/raw/` directory
 
-### 4️⃣ **Run the Analysis**
+### 3️⃣ **Run the Analysis**
 ```bash
-# Option 1: Python script
+# Option 1: Python script (CURRENTLY UNAVAILABLE)
 python -m src.main
 
 # Option 2: Jupyter notebooks
-jupyter notebook notebooks/01_data_exploration.ipynb
+jupyter notebook notebooks/00-vix-trading-strategy-exploration.ipynb
 ```
-
----
-
-## 📊 Key Visualizations
-
-### Performance Comparison
-![Strategy Performance](results/visualizations/performance_comparison.png)
-*The ML strategy (green) shows superior risk-adjusted performance with lower volatility*
-
-### VIX Regime Analysis  
-![VIX Analysis](results/visualizations/vix_regime_analysis.png)
-*Why fixed thresholds fail: VIX distributions change over time*
-
-### Feature Importance
-![ML Features](results/visualizations/feature_importance.png)
-*The most important factors for predicting market direction*
 
 ---
 
@@ -247,6 +217,10 @@ jupyter notebook notebooks/01_data_exploration.ipynb
 
 ## 🔮 Future Enhancements
 
+### 🚧 **Phase 1.5 Roadmap**
+
+- [ ] **Logic Review**: Logic review and debugging
+
 ### 🚧 **Phase 2 Roadmap**
 
 - [ ] **Options Integration**: Use actual VIX futures and options data
@@ -265,25 +239,14 @@ jupyter notebook notebooks/01_data_exploration.ipynb
 
 ---
 
-## 🎓 Educational Value
+## 🎓 What I Learned Personally
 
-### 👨‍💼 **For Recruiters**
-
-This project demonstrates:
-
-**🔍 Problem-Solving**: Started with simple hypothesis, discovered flaws, iteratively improved
+**🔍 Problem-Solving**: Started with simple hypothesis (from the internet), discovered flaws, iteratively improved
 **📊 Technical Skills**: End-to-end data science pipeline in finance domain  
 **🎯 Business Acumen**: Focus on risk-adjusted returns and practical implementation
 **📈 Communication**: Clear explanations of complex quantitative concepts
-
-### 👨‍🎓 **For Students**
-
-Perfect example of:
-
-**📚 Quantitative Finance**: Real-world application of academic concepts
-**🔬 Scientific Method**: Hypothesis testing with financial data
+**📚 Quantitative Finance**: Real-world application of quantitative concepts
 **💻 Data Science**: Feature engineering, ML, and model validation
-**⚖️ Risk Management**: Why volatility matters more than returns
 
 ---
 
@@ -291,23 +254,23 @@ Perfect example of:
 
 ### 🤝 **Let's Chat!**
 
-I'm passionate about quantitative finance and always excited to discuss:
+I'm passionate about quantitative finance -- data science and always excited to discuss:
 - Trading strategies and backtesting methodologies
 - Machine learning applications in finance
 - Risk management and portfolio optimization
-- Career opportunities in quantitative research
+- Career opportunities in quantitative research -- data science
 
-**📧 Email**: [your.email@example.com](mailto:your.email@example.com)  
-**💼 LinkedIn**: [your-linkedin-profile](https://linkedin.com/in/your-profile)  
-**🐙 GitHub**: [More Projects](https://github.com/yourusername)
+**📧 Email**: [melisa.thevandi@u.nus.edu](mailto:melisa.thevandi@u.nus.edu)  
+**💼 LinkedIn**: [melisa-thevandi](https://www.linkedin.com/in/melisa-thevandi)  
+**🐙 GitHub**: [More Projects](https://github.com/melisathevandi)
 
 ---
 
 ## 📜 License & Disclaimer
 
-**MIT License** - Feel free to use this code for learning and research!
+Feel free to use this code for learning and research!
 
-**⚠️ Important Disclaimer**: This is an educational project. Past performance doesn't guarantee future results. Always do your own research and consider your risk tolerance before making investment decisions.
+**⚠️ Important Disclaimer**: This is a personal educational project. Past performance doesn't guarantee future results. Always do your own research and consider your risk tolerance before making investment decisions.
 
 ---
 
@@ -315,11 +278,10 @@ I'm passionate about quantitative finance and always excited to discuss:
 
 - **Data Sources**: Kaggle community for S&P 500 and VIX datasets
 - **Inspiration**: Academic literature on volatility forecasting
-- **Tools**: Python ecosystem (pandas, scikit-learn, matplotlib)
-- **Community**: QuantFinance and r/SecurityAnalysis communities
+- **Tools**: Python ecosystem (pandas, scikit-learn, matplotlib, seaborn)
 
 ---
 
-**⭐ If you found this project helpful, please give it a star and share with others interested in quantitative finance!**
+**⭐ If you found this project helpful, please give it a star and share with others interested in quantitative finance -- data science!**
 
 *Built with ❤️ and lots of ☕ by [Your Name]*
