@@ -72,8 +72,8 @@ short_signal = (vix_high) & (market_weak) & (vix_declining)
 
 **Step 3: Machine Learning**
 - 16 engineered features capturing volatility patterns
-- Random Forest to find complex relationships
-- Walk-forward validation (no peeking into the future!)
+- Random Forest to find complex (non-linear) relationships
+- Walk-forward validation (no peeking into the future, avoiding data leakage!)
 
 ---
 
