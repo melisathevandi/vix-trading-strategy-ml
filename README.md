@@ -10,15 +10,13 @@
 ## 🎯 The Big Idea
 
 **What if we could predict market movements by watching fear itself?**
-Fear -> VIX (Volatility Index)
 
 The VIX (Volatility Index) is often called the "Fear Gauge" - when it spikes, markets panic. When it's low, investors get complacent. This project explores whether we can systematically profit from these emotional swings using data science and machine learning.
-
-**Spoiler Alert**: The journey from simple rules to ML reveals why most retail traders fail at volatility timing! 📊
 
 ---
 
 ## 🚀 Key Findings
+**❗ Disclaimer**: There are some adjusments needed for **Simple VIX Rule** and **Enhanced Rules**.
 
 | Strategy | Annual Return | Risk (Volatility) | Sharpe Ratio | Max Drawdown | Win Rate |
 |----------|---------------|-------------------|--------------|--------------|----------|
@@ -27,15 +25,15 @@ The VIX (Volatility Index) is often called the "Fear Gauge" - when it spikes, ma
 | **🧠 Enhanced Rules** | 61.6% | 19.6% | 3.15 | -16.1% | 58.1% |
 | **🤖 ML Strategy** | **6.8%** | **4.4%** | **1.55** | **-14.4%** | **3.8%** |
 
-**🎉 Winner**: The ML strategy achieves superior risk-adjusted returns with dramatically lower volatility!
-**❗ Disclaimer**: This is not the final stage of the project. There are lots of adjusments to be made.
+**🎉 Winner**: The ML strategy achieves superior risk-adjusted returns with dramatically lower volatility! *(and the most sensible numbers at this stage)*
+
 
 ---
 
 ## 📖 The Story
 
 ### 💡 The Original Hypothesis
-*"When VIX is high, markets are scared → Go short and profit from the decline!"*
+*"When VIX is high, markets are scared → Go short and profit from the decline!"* \
 Another Hypothesis: the threshold for a high VIX is 30
 
 Simple, intuitive, and... **completely wrong** in practice! Here's why:
@@ -55,7 +53,7 @@ Simple, intuitive, and... **completely wrong** in practice! Here's why:
 - High VIX + Bear Market = More pain ahead
 - Context matters more than absolute levels!
 
-### 🛠️ The Solution: Evolution Through Data Science
+### 🛠️ The Solution
 
 **Step 1: Adaptive Thresholds**
 ```python
@@ -79,6 +77,8 @@ short_signal = (vix_high) & (market_weak) & (vix_declining)
 
 ## 🔍 What Makes This Project Special
 
+*for me, personally!*
+
 ### 🎓 Educational Journey
 - **Hypothesis → Test → Learn → Improve**
 - Shows the evolution from simple ideas to sophisticated models
@@ -101,7 +101,7 @@ short_signal = (vix_high) & (market_weak) & (vix_declining)
 
 ---
 
-## 🎯 Skills Demonstrated
+## 🎯 Skills Gained
 
 ### 📈 **Quantitative Finance**
 - Volatility modeling and mean reversion
@@ -128,14 +128,14 @@ This is the **current** Repository Structure. Codes are still in progress, but e
 
 ```
 📦 vix-trading-strategy-ml/
-├── 📋 README.md                    # You are here!
+├── 📋 README.md                                   # You are here!
 ├── 📓 notebooks/
-│   └── 00-vix-trading-strategy-exploration.ipynb
+│   └── 00-vix-trading-strategy-exploration.ipynb  # Exploration and Explanation Notebook
 ├── 🔧 src/
 │   └── __init__.py
 └── 📊 data/
-    ├── SPX.csv                      # S&P 500 Historical Dataset
-    └── VIX.csv                      # VIX Index Dataset
+    ├── SPX.csv                                     # S&P 500 Historical Dataset
+    └── VIX.csv                                     # VIX Index Dataset
 ```
 
 ---
@@ -144,14 +144,14 @@ This is the **current** Repository Structure. Codes are still in progress, but e
 
 ### 1️⃣ **Clone the Repository**
 ```bash
-git clone https://github.com/yourusername/vix-trading-strategy-ml.git
+git clone https://github.com/melisathevandi/vix-trading-strategy-ml.git
 cd vix-trading-strategy-ml
 ```
 
 ### 2️⃣ **Download Data**
 - [S&P 500 Historical Data](https://www.kaggle.com/datasets/henryhan117/sp-500-historical-data)
 - [VIX Daily Prices](https://www.kaggle.com/datasets/maxsmyc/vix-volatility-index-daily-price)
-- Place CSV files in `data/raw/` directory
+- Place CSV files in `data/` directory
 
 ### 3️⃣ **Run the Analysis**
 ```bash
@@ -165,6 +165,8 @@ jupyter notebook notebooks/00-vix-trading-strategy-exploration.ipynb
 ---
 
 ## 🧠 Key Insights & Lessons
+
+*that I learned!*
 
 ### 💎 **Golden Rules Discovered**
 
@@ -180,12 +182,14 @@ jupyter notebook notebooks/00-vix-trading-strategy-exploration.ipynb
    - High VIX + Strong trend = Mean reversion opportunity
    - High VIX + Weak trend = Stay defensive
 
-4. **🤖 ML Excels at Risk Management**
+4. **🤖 ML is Smart at Risk Management**
    - Lower volatility through diversified signals
    - Better downside protection
    - More consistent performance
 
-### 🚨 **Common Pitfalls Avoided**
+### 🚨 **Pitfalls Avoided**
+
+*still being improved*
 
 - **Lookahead Bias**: Only use information available at time T
 - **Overfitting**: Out-of-sample validation catches this
@@ -239,14 +243,14 @@ jupyter notebook notebooks/00-vix-trading-strategy-exploration.ipynb
 
 ---
 
-## 🎓 What I Learned Personally
+## 🎓 Summary What I Learned Personally
 
-**🔍 Problem-Solving**: Started with simple hypothesis (from the internet), discovered flaws, iteratively improved
-**📊 Technical Skills**: End-to-end data science pipeline in finance domain  
-**🎯 Business Acumen**: Focus on risk-adjusted returns and practical implementation
-**📈 Communication**: Clear explanations of complex quantitative concepts
-**📚 Quantitative Finance**: Real-world application of quantitative concepts
-**💻 Data Science**: Feature engineering, ML, and model validation
+**🔍 Problem-Solving**: Started with simple hypothesis *(from the internet)*, discovered flaws, iteratively improved \
+**📊 Technical Skills**: End-to-end data science pipeline in finance domain  \
+**🎯 Business Acumen**: Focus on risk-adjusted returns and practical implementation \
+**📈 Communication**: Breaking down explanations of complex quantitative concepts \
+**📚 Quantitative Finance**: Real-world application of quantitative concepts \
+**💻 Data Science**: Feature engineering, ML, and model validation, backtesting
 
 ---
 
@@ -268,7 +272,7 @@ I'm passionate about quantitative finance -- data science and always excited to 
 
 ## 📜 License & Disclaimer
 
-Feel free to use this code for learning and research!
+**MIT License** - Feel free to use this code for learning and research!
 
 **⚠️ Important Disclaimer**: This is a personal educational project. Past performance doesn't guarantee future results. Always do your own research and consider your risk tolerance before making investment decisions.
 
@@ -284,4 +288,4 @@ Feel free to use this code for learning and research!
 
 **⭐ If you found this project helpful, please give it a star and share with others interested in quantitative finance -- data science!**
 
-*Built with ❤️ and lots of ☕ by [Your Name]*
+*Built with ❤️ and lots of ☕ by **Melisa Abigail Thevandi***
